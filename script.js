@@ -1,3 +1,5 @@
+emailjs.init("6y1jn3KXX1A9-7gWH");
+
 // This array stores the services the user has added to the cart
 let cartItems = [];
 
@@ -104,17 +106,57 @@ function handleBooking() {
         return;
     }
 
-    // Check if form fields are filled
+    // Check if fields are empty
     if (name === "" || email === "" || phone === "") {
         msgEl.textContent = "⚠ Please fill in all the fields";
         msgEl.className = "booking-msg error";
         return;
     }
 
-    // Show success message and reset
-    msgEl.textContent = "✔ Thank you For Booking the Service We will get back to you soon!";
-    msgEl.className = "booking-msg success";
-    clearForm();
+    // Validate email format
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        msgEl.textContent = "⚠ Please enter a valid email address";
+        msgEl.className = "booking-msg error";
+        return;
+    }
+
+    // Validate phone — must be 10 digits
+    const phonePattern = /^[0-9]{10}$/;
+    if (!phonePattern.test(phone)) {
+        msgEl.textContent = "⚠ Please enter a valid 10-digit phone number";
+        msgEl.className = "booking-msg error";
+        return;
+    }
+
+    // Build services list string for the email
+    let serviceList = "";
+    let total = 0;
+    for (let i = 0; i < cartItems.length; i++) {
+        serviceList += (i + 1) + ". " + cartItems[i].name + " - Rs." + cartItems[i].price + "\n";
+        total += cartItems[i].price;
+    }
+
+    // Send confirmation email via EmailJS
+    const templateParams = {
+        to_name: name,
+        to_email: email,
+        phone: phone,
+        services: serviceList,
+        total: "Rs." + total.toFixed(2)
+    };
+
+    emailjs.send("service_5flt0rw", "template_f6l8z0t", templateParams)
+        .then(() => {
+            msgEl.textContent = "✔ Thank you For Booking the Service We will get back to you soon!";
+            msgEl.className = "booking-msg success";
+            clearForm();
+        })
+        .catch((error) => {
+            msgEl.textContent = "⚠ Something went wrong. Please try again.";
+            msgEl.className = "booking-msg error";
+            console.log("EmailJS error:", error);
+        });
 }
 
 // Clears form inputs and resets cart
