@@ -4,122 +4,75 @@
     box-sizing: border-box;
 }
 
-:root {
-    --blue: #2196f3;
-    --blue-dark: #1565c0;
-    --text-dark: #1a1a2e;
-    --text-muted: #6b7280;
-    --bg: #ffffff;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text-dark);
+    background-color: #ffffff;
+    color: #1a1a2e;
 }
 
-/* ── IONICONS ── */
+/* IONICONS */
 ion-icon {
     vertical-align: middle;
 }
 
-.quality-icon ion-icon {
-    font-size: 2.2rem;
-    color: var(--blue);
-}
-
-.social-icons a {
-    text-decoration: none;
-    color: var(--text-muted);
-    font-size: 1.4rem;
-    transition: color 0.2s;
-}
-
-.social-icons a:hover {
-    color: var(--blue);
-}
-
-.service-item ion-icon {
-    font-size: 1rem;
-}
-
-.add-btn ion-icon, .remove-btn ion-icon {
-    font-size: 0.9rem;
-    vertical-align: middle;
-}
-
-/* ── NAVBAR ── */
+/* NAVBAR */
 .header {
     position: sticky;
     top: 0;
-    z-index: 1000;
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    z-index: 100;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 60px;
+    padding: 15px 60px;
 }
 
 .logo {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--text-dark);
+    font-size: 22px;
+    font-weight: bold;
+    color: #1a1a2e;
 }
 
 .nav-links {
     display: flex;
-    gap: 36px;
+    gap: 35px;
     list-style: none;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-dark);
-    font-size: 0.95rem;
+    color: #1a1a2e;
+    font-size: 15px;
     font-weight: 500;
-    position: relative;
 }
 
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--blue);
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.2s ease;
-}
-
-.nav-links a:hover::after {
-    transform: scaleX(1);
+.nav-links a:hover {
+    color: #2196f3;
 }
 
 .btn-username {
-    background: #e3f2fd;
+    background-color: #e3f2fd;
     color: #1565c0;
     border: none;
     padding: 8px 18px;
     border-radius: 6px;
-    font-size: 0.9rem;
+    font-size: 14px;
     cursor: pointer;
 }
 
-/* ── HERO ── */
+/* HERO SECTION */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 80px;
-    height: calc(100vh - 57px);
+    padding: 60px 80px;
     gap: 40px;
+    min-height: 90vh;
 }
 
 .hero-text {
@@ -127,39 +80,38 @@ ion-icon {
 }
 
 .hero-text h2 {
-    font-size: 2.2rem;
-    font-weight: 800;
+    font-size: 36px;
+    font-weight: bold;
     line-height: 1.3;
-    color: var(--text-dark);
-    margin-bottom: 16px;
+    color: #1a1a2e;
+    margin-bottom: 15px;
 }
 
 .hero-text h2 span {
-    color: var(--blue);
+    color: #2196f3;
 }
 
 .hero-text p {
-    font-size: 0.95rem;
-    color: var(--text-muted);
+    font-size: 15px;
+    color: #6b7280;
     line-height: 1.7;
     max-width: 420px;
-    margin-bottom: 28px;
+    margin-bottom: 25px;
 }
 
 .btn-book {
     display: inline-block;
-    background: var(--blue);
-    color: #fff;
-    padding: 13px 30px;
+    background-color: #2196f3;
+    color: #ffffff;
+    padding: 12px 28px;
     border-radius: 8px;
-    font-size: 0.95rem;
+    font-size: 15px;
     font-weight: 600;
     text-decoration: none;
-    transition: background-color 0.2s;
 }
 
 .btn-book:hover {
-    background: var(--blue-dark);
+    background-color: #1565c0;
 }
 
 .hero-image {
@@ -174,187 +126,196 @@ ion-icon {
     border-radius: 10px;
 }
 
-/* ── SERVICE OVERVIEW (ACHIEVEMENTS) ── */
+/* ACHIEVEMENTS STRIP */
 .service-overview {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #1a9ee2;
     padding: 20px 40px;
-    width: 100%;
 }
 
-.service-overview .overview-item {
+.overview-item {
     text-align: center;
     color: white;
 }
 
-.service-overview .overview-item h3 {
-    font-size: 1.8rem;
+.overview-item h3 {
+    font-size: 28px;
     font-weight: bold;
     margin: 0;
 }
 
-.service-overview .overview-item p {
-    font-size: 0.9rem;
-    margin: 4px 0 0 0;
+.overview-item p {
+    font-size: 14px;
+    margin-top: 4px;
 }
 
-/* ── BOOKING SERVICES ── */
+/* BOOKING SECTION */
 .booking-services {
     display: flex;
-    gap: 2rem;
-    padding: 3rem 5%;
+    gap: 30px;
+    padding: 50px 5%;
 }
 
-/* Left panel */
+/* LEFT - services list */
 .services-list {
     flex: 1;
-    background: #fff;
+    background-color: #ffffff;
     border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .services-list-header h2 {
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
 .services-list-header p {
-    font-size: 0.8rem;
-    color: #888;
-    margin-bottom: 1rem;
+    font-size: 13px;
+    color: #888888;
+    margin-bottom: 15px;
 }
 
 .service-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    padding: 0.6rem 0;
+    gap: 10px;
+    padding: 10px 0;
     border-bottom: 1px solid #f0f0f0;
-    font-size: 0.9rem;
+    font-size: 14px;
+}
+
+.service-item ion-icon {
+    font-size: 16px;
 }
 
 .service-item .price {
-    color: #3b82f6;
+    color: #2196f3;
     font-weight: 600;
     flex: 1;
     text-align: right;
 }
 
-.add-btn, .remove-btn {
-    font-size: 0.78rem;
+.add-btn {
+    font-size: 13px;
     padding: 4px 10px;
     border-radius: 4px;
     cursor: pointer;
-    border: 1px solid;
+    border: 1px solid #2196f3;
+    color: #2196f3;
+    background-color: transparent;
     white-space: nowrap;
-    background: transparent;
-}
-
-.add-btn {
-    color: #3b82f6;
-    border-color: #3b82f6;
 }
 
 .remove-btn {
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #e74c3c;
     color: #e74c3c;
-    border-color: #e74c3c;
+    background-color: transparent;
+    white-space: nowrap;
+}
+
+.add-btn ion-icon, .remove-btn ion-icon {
+    font-size: 14px;
+    vertical-align: middle;
 }
 
 .cart-hint {
-    font-size: 0.78rem;
-    color: #aaa;
-    margin-top: 1rem;
+    font-size: 13px;
+    color: #aaaaaa;
+    margin-top: 15px;
 }
 
-/* Right panel */
+/* RIGHT - cart and form */
 .booking-panel {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 20px;
 }
 
 .added-items {
-    background: #fff;
+    background-color: #ffffff;
     border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .added-items h3 {
-    margin-bottom: 1rem;
-    font-size: 1rem;
+    margin-bottom: 15px;
+    font-size: 16px;
 }
 
 .added-items table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.85rem;
+    font-size: 14px;
 }
 
 .added-items th {
     text-align: left;
-    color: #888;
+    color: #888888;
     font-weight: 500;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eeeeee;
 }
 
 .added-items td {
-    padding: 0.4rem 0;
+    padding: 6px 0;
     border-bottom: 1px solid #f5f5f5;
 }
 
 .empty-cart {
     text-align: center;
-    padding: 1.5rem 0;
-    color: #aaa;
-    font-size: 0.85rem;
+    padding: 20px 0;
+    color: #aaaaaa;
+    font-size: 14px;
     line-height: 1.8;
 }
 
 .total-row {
     display: flex;
     justify-content: space-between;
-    font-weight: 600;
-    margin-top: 0.8rem;
-    padding-top: 0.8rem;
-    border-top: 2px solid #eee;
-    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 2px solid #eeeeee;
+    font-size: 14px;
 }
 
-/* Book Now Form */
+/* Book Now form */
 .book-now-form {
-    background: #fff;
+    background-color: #ffffff;
     border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 12px;
 }
 
 .book-now-form h3 {
-    font-size: 1rem;
-    margin-bottom: 0.2rem;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .book-now-form input {
     width: 100%;
     padding: 8px 12px;
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
     border-radius: 6px;
-    font-size: 0.85rem;
-    box-sizing: border-box;
+    font-size: 14px;
 }
 
 .form-row {
     display: flex;
-    gap: 0.8rem;
+    gap: 12px;
 }
 
 .form-row input {
@@ -362,30 +323,28 @@ ion-icon {
 }
 
 .book-btn {
-    background: #3b82f6;
-    color: #fff;
+    background-color: #2196f3;
+    color: #ffffff;
     border: none;
     padding: 10px;
     border-radius: 6px;
-    font-size: 0.95rem;
+    font-size: 15px;
     cursor: pointer;
-    margin-top: 0.3rem;
-    transition: background-color 0.2s;
+    margin-top: 5px;
 }
 
 .book-btn:hover {
-    background: #2563eb;
+    background-color: #1565c0;
 }
 
 .book-btn:disabled {
-    background: #a0aec0;
+    background-color: #aaaaaa;
     cursor: not-allowed;
 }
 
-/* Messages below Book Now button */
 .booking-msg {
-    font-size: 0.82rem;
-    margin-top: 0.2rem;
+    font-size: 13px;
+    margin-top: 5px;
 }
 
 .booking-msg.error {
@@ -396,14 +355,14 @@ ion-icon {
     color: #27ae60;
 }
 
-/* ── QUALITY DESCRIPTION ── */
+/* QUALITY SECTION */
 .quality-section {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 3rem 5%;
-    gap: 1.5rem;
-    background: #f9fafb;
+    padding: 50px 5%;
+    gap: 20px;
+    background-color: #f9fafb;
 }
 
 .quality-item {
@@ -413,42 +372,47 @@ ion-icon {
 }
 
 .quality-icon {
-    margin-bottom: 0.7rem;
+    margin-bottom: 12px;
+}
+
+.quality-icon ion-icon {
+    font-size: 36px;
+    color: #2196f3;
 }
 
 .quality-item h4 {
-    font-size: 0.95rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: var(--text-dark);
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #1a1a2e;
 }
 
 .quality-item p {
-    font-size: 0.8rem;
-    color: var(--text-muted);
+    font-size: 13px;
+    color: #6b7280;
     line-height: 1.5;
 }
 
-/* ── NEWSLETTER ── */
+/* NEWSLETTER */
 .newsletter-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #2196f3;
-    padding: 2.5rem 8%;
-    gap: 2rem;
+    background-color: #2196f3;
+    padding: 40px 8%;
+    gap: 30px;
 }
 
 .newsletter-text h3 {
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
     line-height: 1.4;
 }
 
 .newsletter-form {
     display: flex;
-    gap: 1rem;
+    gap: 15px;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -457,58 +421,57 @@ ion-icon {
     padding: 10px 14px;
     border: none;
     border-radius: 6px;
-    font-size: 0.9rem;
+    font-size: 14px;
     width: 180px;
     outline: none;
 }
 
 .newsletter-form button {
     padding: 10px 24px;
-    background: #fff;
+    background-color: #ffffff;
     color: #2196f3;
     border: none;
     border-radius: 6px;
-    font-size: 0.9rem;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s;
 }
 
 .newsletter-form button:hover {
-    background: #e3f2fd;
+    background-color: #e3f2fd;
 }
 
-/* ── FOOTER ── */
+/* FOOTER */
 .footer {
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
-    padding: 3rem 8%;
-    background: #fff;
-    border-top: 1px solid #eee;
+    gap: 30px;
+    padding: 50px 8%;
+    background-color: #ffffff;
+    border-top: 1px solid #eeeeee;
 }
 
 .footer-col h4 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--text-dark);
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #1a1a2e;
 }
 
 .footer-logo {
-    font-size: 1.3rem !important;
+    font-size: 20px !important;
 }
 
 .footer-about-label {
-    font-size: 0.85rem;
+    font-size: 14px;
     font-weight: 600;
-    margin-bottom: 0.4rem;
-    color: var(--text-dark);
+    margin-bottom: 6px;
+    color: #1a1a2e;
 }
 
 .footer-about-text {
-    font-size: 0.8rem;
-    color: var(--text-muted);
+    font-size: 13px;
+    color: #6b7280;
     line-height: 1.5;
     max-width: 160px;
 }
@@ -517,33 +480,41 @@ ion-icon {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 8px;
 }
 
 .footer-col ul li a {
     text-decoration: none;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    transition: color 0.2s;
+    font-size: 14px;
+    color: #6b7280;
 }
 
 .footer-col ul li a:hover {
-    color: var(--blue);
+    color: #2196f3;
 }
 
 .footer-col p {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-bottom: 0.4rem;
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 6px;
 }
 
 .social-icons {
     display: flex;
-    gap: 0.8rem;
-    font-size: 1.3rem;
+    gap: 12px;
 }
 
-/* ── RESPONSIVE ── */
+.social-icons a {
+    text-decoration: none;
+    color: #6b7280;
+    font-size: 22px;
+}
+
+.social-icons a:hover {
+    color: #2196f3;
+}
+
+/* RESPONSIVE */
 @media (max-width: 900px) {
     .booking-services {
         flex-direction: column;
@@ -560,7 +531,6 @@ ion-icon {
 
     .footer {
         flex-wrap: wrap;
-        gap: 2rem;
     }
 
     .newsletter-section {
@@ -578,15 +548,11 @@ ion-icon {
         gap: 16px;
     }
 
-    .nav-links a {
-        font-size: 0.8rem;
-    }
-
     .hero {
         flex-direction: column;
-        height: auto;
-        padding: 3rem 5%;
+        padding: 40px 5%;
         text-align: center;
+        min-height: auto;
     }
 
     .hero-image {
@@ -599,8 +565,8 @@ ion-icon {
 
     .service-overview {
         flex-wrap: wrap;
-        gap: 1rem;
-        padding: 1.5rem 5%;
+        gap: 15px;
+        padding: 20px 5%;
     }
 }
 
