@@ -66,6 +66,99 @@
 
         </section>
 
+        <section id="booking" class="booking-services">
+
+            <div class="services-list">
+                <h2>Our Services</h2>
+                <p>Click On The Add To Cart Button To Add The Services To Your Cart</p>
+
+                <div class="service-item">
+                    <span>Dry Cleaning</span>
+                    <span class="price">₹200.00</span>
+                    <button id="btn-Dry Cleaning" onclick="addItem('Dry Cleaning', 200)">Add Item</button>
+                </div>
+
+                <div class="service-item">
+                    <span>Wash & Fold</span>
+                    <span class="price">₹100.00</span>
+                    <button id="btn-Wash & Fold" onclick="addItem('Wash & Fold', 100)">Add Item</button>
+                </div>
+
+                <div class="service-item">
+                    <span>Ironing</span>
+                    <span class="price">₹30.00</span>
+                    <button id="btn-Ironing" onclick="addItem('Ironing', 30)">Add Item</button>
+                </div>
+
+                <div class="service-item">
+                    <span>Stain Removal</span>
+                    <span class="price">₹500.00</span>
+                    <button id="btn-Stain Removal" onclick="addItem('Stain Removal', 500)">Add Item</button>
+                </div>
+
+                <div class="service-item">
+                    <span>Leather & Seude Cleaning</span>
+                    <span class="price">₹999.00</span>
+                    <button id="btn-Leather & Seude Cleaning" onclick="addItem('Leather & Seude Cleaning', 999)">Add Item</button>
+                </div>
+
+                <div class="service-item">
+                    <span>Wedding Dress Cleaning</span>
+                    <span class="price">₹2800.00</span>
+                    <button id="btn-Wedding Dress Cleaning" onclick="addItem('Wedding Dress Cleaning', 2800)">Add Item</button>
+                </div>
+
+                <p>&#9432; Add the items to the cart and book now</p>
+
+            </div>
+
+            <div class="booking-panel">
+
+                <div class="added-items">
+
+                    <h3>Added Items</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Service</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-body">
+
+                        </tbody>
+                    </table>
+
+                    <div class="total-row">
+                        <span>Total Amount</span>
+                        <span id="total-amount">₹ 0</span>
+                    </div>
+
+                </div>
+
+                <div class="book-now-form">
+
+                    <h3>Book Now</h3>
+
+                    <input type="text" id="full-name" placeholder="Full Name">
+
+                    <div class="form-row">
+                        <input type="email" id="email-id" placeholder="Email Id">
+                        <input type="tel" id="phone-number" placeholder="Phone Number">
+                    </div>
+
+                    <button id="book-btn" onclick="handleBooking()">Book Now</button>
+                    
+                    <p id="booking-msg"></p>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 </body>
 </html>
