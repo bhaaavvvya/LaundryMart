@@ -22,7 +22,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 60px;
+    padding: 12px 5%;
 }
 
 .logo {
@@ -60,7 +60,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 60px 80px;
+    padding: 60px 5%;
     min-height: 80vh;
     gap: 40px;
 }
@@ -410,4 +410,76 @@ body{
 
 .social-icons a:hover {
     color: #2196f3;
+}
+
+@media (max-width: 768px) 
+{
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 40px 5%;
+        text-align: center;
+    }
+
+    .hero-image {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 100%;
+    }
+
+    .booking-services {
+        flex-direction: column;
+    }
+
+    .quality-section {
+        flex-wrap: wrap;
+    }
+
+    .quality-item {
+        min-width: 45%;
+    }
+
+    .newsletter {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .service-overview {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 20px 5%;
+        width: 100%;
+    }
+    
+    .overview-item {
+        min-width: 45%;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .newsletter-form input {
+        width: 100%;
+    }
+    
+    .newsletter-form button {
+        width: 100%;
+    }
 }
