@@ -483,3 +483,48 @@ body{
         width: 100%;
     }
 }
+
+.service-item button {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-text a {
+    transition: background-color 0.3s;
+}
+
+#book-btn {
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button {
+    transition: background-color 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-text {
+    animation: fadeIn 0.8s ease;
+}
+
+.hero-image {
+    animation: fadeIn 1s ease;
+}
+
+.quality-item {
+    transition: transform 0.3s;
+}
+
+.quality-item:hover {
+    transform: translateY(-5px);
+}
+
+.services-list {
+    transition: box-shadow 0.3s;
+}
+
+.added-items {
+    transition: box-shadow 0.3s;
+}
