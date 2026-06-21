@@ -113,3 +113,26 @@ body{
     max-width: 100%;
     border-radius: 10px;
 }
+
+.service-overview {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1a9ee2;
+    padding: 20px 40px;
+}
+
+.overview-item {
+    text-align: center;
+    color: #ffffff;
+}
+
+.overview-item h3 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.overview-item p {
+    font-size: 14px;
+    margin-top: 4px;
+}
