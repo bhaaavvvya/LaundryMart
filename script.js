@@ -93,8 +93,20 @@ function handleBooking() {
         return;
     }
 
-    if (name === "" || email === "" || phone === "") {
-        msgEl.textContent = "⚠ Please fill in all the fields";
+    if (name === "") {
+        msgEl.textContent = "⚠ Please enter your full name";
+        msgEl.style.color = "#e74c3c";
+        return;
+    }
+    
+    if (email === "") {
+        msgEl.textContent = "⚠ Please enter your email address";
+        msgEl.style.color = "#e74c3c";
+        return;
+    }
+    
+    if (phone === "") {
+        msgEl.textContent = "⚠ Please enter your phone number";
         msgEl.style.color = "#e74c3c";
         return;
     }
@@ -157,8 +169,14 @@ function handleSubscribe() {
     const newsEmail = document.getElementById("news-email").value.trim();
     const msgEl = document.getElementById("news-msg");
 
-    if (newsName === "" || newsEmail === "") {
-        msgEl.textContent = "⚠ Please fill in all fields";
+    if (newsName === "") {
+        msgEl.textContent = "⚠ Please enter your name";
+        msgEl.style.color = "#e74c3c";
+        return;
+    }
+    
+    if (newsEmail === "") {
+        msgEl.textContent = "⚠ Please enter your email address";
         msgEl.style.color = "#e74c3c";
         return;
     }
